@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const StoryList = ({ stories }) => {
   return (
-    <div>
+    <div className="story-list">
       {stories.map(story => (
         <div className="story" key={story.id}>
           <h2 className="story-title">
@@ -16,6 +16,45 @@ const StoryList = ({ stories }) => {
           </div>
         </div>
       ))}
+      <style jsx>{`
+        .story-list {
+          padding: 0 1em;
+        }
+        .story {
+          padding: 1em 0;
+        }
+        .story-title {
+          font-size: 1rem;
+          font-weight: 400;
+          margin: 0%;
+          margin-bottom: 0.5em;
+        }
+        .story-details {
+          font-weight: bold;
+          font-size: 0.8rem;
+        }
+        .story-title a {
+          color: #333;
+          text-decoration: none;
+        }
+        .story-title a:hover,
+        .story-details a:hover {
+          text-decoration: underline;
+        }
+        .story-details span {
+          margin-right: 1em;
+        }
+        .story-details a {
+          color: #6600ff;
+          text-decoration: none;
+        }
+      `}</style>
+      <style global jsx>{`
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+      `}</style>
     </div>
   );
 };
