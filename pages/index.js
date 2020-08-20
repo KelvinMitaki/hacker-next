@@ -23,9 +23,24 @@ export class index extends Component {
         {this.props.stories.map(story => (
           <h2 key={story.id}>{story.title}</h2>
         ))}
+        <style jsx>{`
+          body {
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+              sans-serif;
+          }
+        `}</style>
+        <style global jsx>{`
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+              sans-serif;
+            font-weight: bold;
+          }
+        `}</style>
       </div>
     );
   }
 }
-
 export default index;
