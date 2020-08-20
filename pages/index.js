@@ -18,7 +18,7 @@ export class index extends Component {
     }
   }
   componentDidMount() {
-    if (navigator.serviceWorker) {
+    if ("serviceWorker" in navigator) {
       navigator.serviceWorker
         .register("/service-worker.js")
         .then(reg => {
