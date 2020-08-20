@@ -4,7 +4,7 @@
   "description": "a hacker news clone built on top of next js",
   "main": "server.js",
   "scripts": {
-    "dev": "next"
+    "dev": "node server.js"
   },
   "author": "kevin mitaki",
   "license": "ISC",

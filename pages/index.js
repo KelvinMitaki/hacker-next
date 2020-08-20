@@ -17,6 +17,16 @@ export class index extends Component {
       return { statusCode: (error.response && error.response.status) || 503 };
     }
   }
+  componentDidMount() {
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(reg => {
+          console.log("reg successful", reg);
+        })
+        .catch(err => console.log("reg error", err));
+    }
+  }
   render() {
     if (this.props.statusCode) {
       return <Error statusCode={this.props.statusCode} />;

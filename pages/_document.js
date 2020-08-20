@@ -5,7 +5,7 @@ export class myDocument extends Document {
     return (
       <html lang="en-US">
         <Head>
-          <link rel="manifest" href="/static/manifest.json" />
+          <link rel="manifest" href="/public/manifest.json" />
 
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -23,25 +23,25 @@ export class myDocument extends Document {
             rel="icon"
             type="image/png"
             sizes="512x512"
-            href="/static/icons/icon-512x512.png"
+            href="/public/icons/icon-512x512.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="512x512"
-            href="/static/icons/icon-512x512.png"
+            href="/public/icons/icon-512x512.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="192x192"
-            href="/static/icons/icon-192x192.png"
+            href="/public/icons/icon-192x192.png"
           />
           <link
             rel="apple-touch-icon"
             type="image/png"
             sizes="192x192"
-            href="/static/icons/icon-192x192.png"
+            href="/public/icons/icon-192x192.png"
           />
         </Head>
         <body>
