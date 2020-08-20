@@ -20,7 +20,10 @@ export class index extends Component {
       return <Error statusCode={this.props.statusCode} />;
     }
     return (
-      <Layout>
+      <Layout
+        title="Hacker Next"
+        description="A Hacker News clone built with Next js "
+      >
         <StoryList stories={this.props.stories} />
       </Layout>
     );
