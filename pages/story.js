@@ -11,7 +11,7 @@ export class story extends Component {
       );
       return { story: res.data };
     } catch (error) {
-      return { statusCode: error.response.status };
+      return { statusCode: (error.response && error.response.status) || 503 };
     }
   }
   render() {
@@ -21,7 +21,7 @@ export class story extends Component {
     }
 
     return (
-      <Layout title={story.title}>
+      <Layout title={story.title} backButton={true}>
         <main>
           <h1 className="story-title">
             <a href={story.url}>{story.title}</a>

@@ -14,7 +14,7 @@ export class index extends Component {
       );
       return { stories: res.data, page };
     } catch (error) {
-      return { statusCode: error.response.status };
+      return { statusCode: (error.response && error.response.status) || 503 };
     }
   }
   render() {
