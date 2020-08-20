@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 import Error from "next/error";
 import StoryList from "../components/StoryList";
+import Layout from "../components/Layout";
 
 export class index extends Component {
   static async getInitialProps() {
@@ -19,10 +20,9 @@ export class index extends Component {
       return <Error statusCode={this.props.statusCode} />;
     }
     return (
-      <div>
-        <h1>hacker next</h1>
+      <Layout>
         <StoryList stories={this.props.stories} />
-      </div>
+      </Layout>
     );
   }
 }
