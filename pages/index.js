@@ -29,9 +29,19 @@ export class index extends Component {
         <StoryList stories={this.props.stories} />
         <footer>
           <Link href={`/?page=${this.props.page + 1}`}>
-            <a>Click Here</a>
+            <a>Next ({this.props.page + 1})</a>
           </Link>
         </footer>
+        <style jsx>{`
+          footer {
+            padding: 1em;
+          }
+          footer a {
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+          }
+        `}</style>
       </Layout>
     );
   }
